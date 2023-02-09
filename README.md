@@ -6,7 +6,7 @@ Running the API.
 2. Once the file is cloned move into the folder containing python scripts.
 3. Create a virtual environment using the "python3 -m venv venv" command.
 4. Activate the virtual environment using the ". venv/bin/activate" command.
-5. Install flask using the "pip install flask" command.
+5. Install flask and flask_restful using the "pip install flask" and "pip install flask_restful" command.
 6. Once Flask is installed run the userdetails.py using python. The local host for the API will be ddisplayed and use "/userdetails" endpoint to get the desired json data.
 7. Run the test.py script to see the output of unittest cases.
 
