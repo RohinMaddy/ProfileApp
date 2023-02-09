@@ -2,17 +2,18 @@
 //  APIManager.swift
 //  Userdetails_iOS
 //
-//  Created by Santhy Rachel Thomas on 08/02/2023.
+//  Created by Rohin Madhavan on 08/02/2023.
 //
 
 import UIKit
 
 class APIManager: NSObject {
     
+    let baseURL = "http://127.0.0.1:5000/userdetails"
+    
     func apiToGetProfileData(completion : @escaping (Profile) -> ()){
-        let urlString = "http://127.0.0.1:5000/userdetails"
 
-        guard let url = URL(string:urlString) else {
+        guard let url = URL(string:baseURL) else {
             return
         }
      

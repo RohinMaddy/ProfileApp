@@ -2,7 +2,7 @@
 //  Userdetails_iOSTests.swift
 //  Userdetails_iOSTests
 //
-//  Created by Santhy Rachel Thomas on 08/02/2023.
+//  Created by Rohin Madhavan on 08/02/2023.
 //
 
 import XCTest
@@ -13,6 +13,25 @@ final class Userdetails_iOSTests: XCTestCase {
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
+    
+    func testAPIWorking()
+        {
+            let apiManager = APIManager()
+            let expectation = XCTestExpectation.init(description: "API call returns success")
+            guard let url = URL(string:apiManager.baseURL) else {
+                return
+            }
+            let request = URLRequest(url: url)
+            let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+                if error != nil {
+                    XCTFail("API call encountered an error")
+                } else {
+                    expectation.fulfill()
+                }
+                self.waitForExpectations(timeout: 20)
+            })
+            task.resume()
+        }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
