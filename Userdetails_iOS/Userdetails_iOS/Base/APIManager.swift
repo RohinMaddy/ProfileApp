@@ -11,6 +11,8 @@ class APIManager: NSObject {
     
     let baseURL = "http://127.0.0.1:5000/userdetails"
     
+    // API service to ge the profile data from the python script file using the local host.
+    
     func apiToGetProfileData(completion : @escaping (Profile) -> ()){
 
         guard let url = URL(string:baseURL) else {

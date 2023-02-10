@@ -14,6 +14,8 @@ final class Userdetails_iOSTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
+    //Unit test to check if the API is working. Testcase fails if the API returns an error value.
+    
     func testAPIWorking()
         {
             let apiManager = APIManager()

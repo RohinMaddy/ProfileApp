@@ -18,7 +18,7 @@ class SplashViewController: UIViewController {
         tableView.dataSource = self
         callToViewModelForUIUpdate()
     }
-    
+// function call to the viewmodel to get the API data and bind it to the controller.
     func callToViewModelForUIUpdate(){
         self.viewModel =  ViewModel()
         self.viewModel.bindViewModelToController = {
@@ -30,6 +30,8 @@ class SplashViewController: UIViewController {
     }
 
 }
+
+// Controller extension to populate and manage tableview delegate and datasource
 
 extension SplashViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -76,6 +78,7 @@ extension SplashViewController: UITableViewDelegate, UITableViewDataSource {
         header.textLabel?.textColor = UIColor.white
     }
 }
+// image extension to load image from url asynchronously
 
 extension UIImageView {
     func setImageFromUrl(ImageURL :String) {

@@ -22,7 +22,7 @@ class ViewModel: NSObject {
         self.apiManager =  APIManager()
         getApiData()
     }
-    
+// Function call to API service to get the user data and it is bound to the controller.
     func getApiData() {
         self.apiManager.apiToGetProfileData { (userData) in
             self.userData = userData
