@@ -2,7 +2,7 @@
 //  Userdetails_iOSUITests.swift
 //  Userdetails_iOSUITests
 //
-//  Created by Santhy Rachel Thomas on 08/02/2023.
+//  Created by Rohin Madhavan on 08/02/2023.
 //
 
 import XCTest
